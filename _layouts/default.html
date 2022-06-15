@@ -41,7 +41,7 @@
 
     <body>
 
-        <nav class="navbar" role="navigation" aria-label="main navigation">
+        <nav class="navbar is-dark has-shadow" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
                 <a class="navbar-item" href="/">
                     <h1 class="title">Ivan Noden</h1>
@@ -57,17 +57,33 @@
 
             <div id="mainNavbar" class="navbar-menu">
                 <div class="navbar-start">
-                    <a href="/" class="navbar-item">
+                    <a href="/" {% if page.title == "Home" %} class="navbar-item is-active" {% else %} class="navbar-item" {% endif %}>
                         Home
                     </a>
             
-                    <a href="/about" class="navbar-item">
+                    <a href="/about" {% if page.title == "About" %} class="navbar-item is-active" {% else %} class="navbar-item" {% endif %}>
                         About
                     </a>
+
+                    <div {% if page.title == "Blog" %} class="navbar-item is-active has-dropdown is-hoverable" {% else %} class="navbar-item has-dropdown is-hoverable" {% endif %}>
             
-                    <a href="/blog" class="navbar-item">
-                        Blog
-                    </a>
+                        <a href="/blog" class="navbar-link">
+                            Blog
+                        </a>
+
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item">
+                              Maths
+                            </a>
+                            <a class="navbar-item">
+                              Research
+                            </a>
+                            <a class="navbar-item">
+                              Programming
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </nav>
