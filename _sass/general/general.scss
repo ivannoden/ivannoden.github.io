@@ -1,3 +1,24 @@
 *{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Noto Sans Mono', monospace;
+}
+
+h1{
+    font-size: 6rem;
+    font-weight: 700;
+}
+
+h3{
+    font-size: 2rem;
+}
+
+.page-content{
+    padding: 3rem 5rem;
+}
+
+p {
+    padding-bottom: 0.5rem;
+}
+
+#recent-blog-posts{
+    padding-top: 5rem;
 }
